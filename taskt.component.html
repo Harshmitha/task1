@@ -1,0 +1,34 @@
+<!-- <div class="top">
+        
+        <input type="text" [(ngModel)]="list" placeholder="Title..." >
+        <button (click)="add(list)" class="b">Add</button>
+        </div>
+        
+            <div class="c"> 
+      
+        <table>
+            <tr (click)="del(list)" *ngFor="let arry of ele; let i=index"><br>
+                <div>{{arry}} 
+                   <button (click)="del(i)">X</button></div>
+            </tr>
+        </table> -->
+        <html>
+            <body>
+                <input type="search" [(ngModel)]="search" placeholder="Search">&nbsp;&nbsp;
+                <button (click)="add()">Add Movie</button>
+                <table>
+                <tr>
+                    <th>Movie Name</th>
+                    <th>Language</th>
+                    <th>Genre</th>
+                </tr>
+                <tr *ngFor='let a of moviedata|customerEmailFilter:search;let i=index'>
+                    
+                    <td>{{a.MovieName}}</td>
+                    <td>{{a.Language}}</td>
+                    <td>{{a.Genre}}</td>
+        
+               </tr>
+            </table>
+            </body>
+        </html>
